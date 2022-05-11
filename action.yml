@@ -6,5 +6,15 @@ branding:
 runs:
   using: "composite"
   steps:
+    - run: |
+        pwd
+        echo $JENKINS_HOME
+        if [[ "$JENKINS_HOME" != "/*" ]]; then
+          echo "JENKINS_HOME=$(pwd)/${JENKINS_HOME}" >> $GITHUB_ENV
+          cat $GITHUB_ENV
+        fi
+      shell: bash
+      env:
+        JENKINS_HOME: ./jenkins_home
     - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml up -d --wait
       shell: bash
