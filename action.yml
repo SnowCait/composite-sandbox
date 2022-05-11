@@ -6,6 +6,10 @@ branding:
 runs:
   using: "composite"
   steps:
+    - run: ls -la /
+      shell: bash
+    - run: docker compose version
+      shell: bash
     - run: |
         pwd
         echo $JENKINS_HOME
