@@ -26,7 +26,7 @@ runs:
       shell: bash
     - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml config
       shell: bash
-    - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml up
-      shell: bash
-#     - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml up -d --wait
+#     - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml up
 #       shell: bash
+    - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml up -d --wait
+      shell: bash
