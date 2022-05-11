@@ -24,7 +24,7 @@ runs:
         mkdir -p $JENKINS_HOME
         sudo chown -R 1000:1000 $JENKINS_HOME
       shell: bash
-    - run: docker-compose -f ${GITHUB_ACTION_PATH}/compose.yaml config
+    - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml config
       shell: bash
     - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml up
       shell: bash
