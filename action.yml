@@ -6,5 +6,5 @@ branding:
 runs:
   using: "composite"
   steps:
-    - run: docker-compose up -d --wait
+    - run: docker compose up -d --wait
       shell: bash
