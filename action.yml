@@ -16,5 +16,7 @@ runs:
       shell: bash
       env:
         JENKINS_HOME: ./jenkins_home
+    - run: docker-compose -f ${GITHUB_ACTION_PATH}/compose.yaml config
+      shell: bash
     - run: docker compose -f ${GITHUB_ACTION_PATH}/compose.yaml up -d --wait
       shell: bash
