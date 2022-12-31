@@ -19,7 +19,7 @@ jobs:
 #         shell: bash
 
     steps:
-      - uses: SnowCait/composite-sandbox@main
+      # - uses: SnowCait/composite-sandbox@main
       - run: serverless --version
 #       - uses: actions/checkout@v3
 #       - uses: ./
