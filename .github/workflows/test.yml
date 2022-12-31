@@ -9,12 +9,17 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        runner: [ ubuntu-22.04, windows-2019 ]
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: 10
-    defaults:
-      run:
-        shell: bash
+#     defaults:
+#       run:
+#         shell: bash
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./
+      - uses: SnowCait/composite-sandbox@main
+      - run: serverless --version
+#       - uses: actions/checkout@v3
+#       - uses: ./
