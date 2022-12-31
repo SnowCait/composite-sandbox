@@ -9,6 +9,7 @@ runs:
     - run: npm install -g serverless
       shell: bash
     - run: serverless --version
+      shell: bash
 #     - run: ls -la /
 #       shell: bash
 #     - run: docker compose version
