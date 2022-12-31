@@ -15,12 +15,12 @@ jobs:
         runner: [ ubuntu-22.04, windows-2019 ]
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 10
-#     defaults:
-#       run:
-#         shell: bash
+    defaults:
+      run:
+        shell: pwsh
 
     steps:
-      # - uses: SnowCait/composite-sandbox@main
+      - uses: SnowCait/composite-sandbox@main
       - run: serverless --version
 #       - uses: actions/checkout@v3
 #       - uses: ./
